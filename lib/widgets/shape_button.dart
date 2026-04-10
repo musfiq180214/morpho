@@ -71,22 +71,22 @@ class _ShapeButtonState extends State<ShapeButton>
           decoration: BoxDecoration(
             color: widget.isActive
                 ? widget.color.withOpacity(0.2)
-                : Colors.white.withOpacity(0.04),
+                : Colors.transparent,
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
               color: widget.isActive
                   ? widget.color
-                  : Colors.white.withOpacity(0.12),
+                  : widget.color.withOpacity(0.35),
               width: widget.isActive ? 2 : 1,
             ),
             boxShadow: widget.isActive
                 ? [
-                    BoxShadow(
-                      color: widget.color.withOpacity(0.35),
-                      blurRadius: 16,
-                      spreadRadius: 2,
-                    )
-                  ]
+              BoxShadow(
+                color: widget.color.withOpacity(0.35),
+                blurRadius: 16,
+                spreadRadius: 2,
+              )
+            ]
                 : [],
           ),
           child: Center(
@@ -94,9 +94,7 @@ class _ShapeButtonState extends State<ShapeButton>
               size: const Size(36, 36),
               painter: _ShapeIconPainter(
                 shape: widget.shape,
-                color: widget.isActive
-                    ? widget.color
-                    : Colors.white.withOpacity(0.4),
+                color: widget.color,
               ),
             ),
           ),

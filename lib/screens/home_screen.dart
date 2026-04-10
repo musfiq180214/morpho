@@ -105,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     final color = _shapeColor(currentShape);
 
     return Scaffold(
-      backgroundColor: const Color(0xFF0A0A1A),
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           // Animated background
@@ -149,7 +149,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                       'SHAPE · SHIFT · SURVIVE',
                       style: GoogleFonts.orbitron(
                         fontSize: 11,
-                        color: Colors.white.withOpacity(0.4),
+                        color: Colors.black,
                         letterSpacing: 4,
                       ),
                     ),
@@ -210,8 +210,9 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                     'BEST',
                     style: GoogleFonts.orbitron(
                       fontSize: 10,
-                      color: Colors.white.withOpacity(0.3),
+                      color: Colors.black,
                       letterSpacing: 3,
+
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -274,7 +275,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                   'TAP SHAPES TO MORPH · MATCH THE HOLE',
                   style: GoogleFonts.orbitron(
                     fontSize: 9,
-                    color: Colors.white.withOpacity(0.25),
+                    color: Colors.black,
                     letterSpacing: 2,
                   ),
                 ),
